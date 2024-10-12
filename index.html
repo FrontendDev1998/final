@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-401</title>
+    <link rel="stylesheet" href="hanz.css">
+    <!-- Add reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="icon" href="HANZ LOGO.PNG" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Background Wrapper for Image and Filter -->
+    <div class="background-wrapper">
+        <img src="HANZ IMAGE KARENDERYA.PNG" alt="Background">
+    </div>
+
+    <!-- Center the Login Form -->
+    <div class="centered-container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="myForm" onsubmit="return validateLogin(event);">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+    <!-- reCAPTCHA -->
+    <div class="fake-recaptcha">
+        <input type="checkbox" class="inp-cbx" id="fake-recaptcha-checkbox" required>
+        <label class="cbx" for="fake-recaptcha-checkbox">
+            <span>
+                <svg width="12px" height="10px" viewBox="0 0 12 10">
+                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                </svg>
+            </span>
+            <span>I'm not a robot</span>
+        </label>
+        <div class="recaptcha-badge">
+            <span>reCAPTCHA</span>
+            <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
+        </div>
+    </div>
+
+    
+                <div id="login-error" style="color: red; display: none; margin-bottom: 10px;">Invalid username or password.</div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <script href="hanz.js"></script>
+    <script>
+            // login function
+            function validateLogin(event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Get the input values
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorDiv = document.getElementById('login-error');
+
+        // Check if the username and password match the predefined values
+        if (username === 'cute123' && password === 'admin2024') {
+            // Redirect to 2nd.html if the credentials are correct
+            window.location.href = '2nd.html';
+        } else {
+            // Show the error message if the credentials are incorrect
+            errorDiv.style.display = 'block';
+        }
+    }
+
+
+            
+ /// notif required
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+        var checkbox = document.getElementById('fake-recaptcha-checkbox');
+        var errorDiv = document.getElementById('checkbox-error');
+
+        if (!checkbox.checked) {
+            // Prevent form submission
+            event.preventDefault();
+            // Show the error message
+            errorDiv.style.display = 'block';
+        } else {
+            // Hide the error message if the checkbox is checked
+            errorDiv.style.display = 'none';
+        }
+    });
+
+    </script>
+</body>
+</html>

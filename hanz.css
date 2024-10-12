@@ -1,0 +1,341 @@
+ /* Base Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper for background image */
+.background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Behind the form */
+}
+
+/* Background Image with Filter */
+.background-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) blur(3px); /* Filter only on the image */
+}
+
+/* Login Form Container */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(5px); /* Makes it look elegant */
+    z-index: 1; /* On top of everything */
+    position: relative;
+}
+
+/* Center the form */
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Styles */
+.login-container h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    color: #fff;
+    margin: 10px 0 5px;
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Fake reCAPTCHA Box */
+.fake-recaptcha {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Hide the checkbox */
+.fake-recaptcha input[type="checkbox"] {
+    margin-right: 10px;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    visibility: hidden;
+}
+
+/* Custom checkbox styles */
+.fake-recaptcha .cbx {
+    margin: auto;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.fake-recaptcha .cbx span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.fake-recaptcha .cbx span:first-child {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    transform: scale(1);
+    vertical-align: middle;
+    border: 1px solid #9098a9;
+    transition: all 0.2s ease;
+}
+
+.fake-recaptcha .cbx span:first-child svg {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.fake-recaptcha .cbx span:first-child:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #506eec;
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.fake-recaptcha .cbx span:last-child {
+    padding-left: 8px;
+}
+
+.fake-recaptcha .cbx:hover span:first-child {
+    border-color: #506eec;
+}
+
+/* When checkbox is checked */
+.fake-recaptcha .inp-cbx:checked + .cbx span:first-child {
+    background: #506eec;
+    border-color: #506eec;
+    animation: wave-46 0.4s ease;
+}
+
+.fake-recaptcha .inp-cbx:checked + .cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.fake-recaptcha .inp-cbx:checked + .cbx span:first-child:before {
+    transform: scale(3.5);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+/* Keyframes for the checkbox animation */
+@keyframes wave-46 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+/* Additional existing styles */
+.fake-recaptcha label {
+    font-size: 14px;
+}
+
+.recaptcha-badge {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 12px;
+    color: #555;
+}
+
+.recaptcha-badge img {
+    height: 14px;
+    margin-left: 5px;
+}
+
+
+
+/*2nd page css*/
+
+/*************************************************************************************/
+#order-section, #cart-section, #receipt-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.food-item {
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.food-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#cart-items {
+    margin: 20px 0;
+}
+
+#cart-items div {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 1rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #ffdd57;
+}
+
+.footer-column p,
+.footer-column a {
+    color: #bbb;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #ffdd57;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 1rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* Social Media Links */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 1rem 0;
+    }
+}

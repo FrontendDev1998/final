@@ -51,45 +51,6 @@ document.getElementById('fake-recaptcha-checkbox').addEventListener('click', fun
             errorDiv.style.display = 'block';
         }
     }
-//// disable inspect
-     // Disable Right Click
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
 
-// Disable F12 Key (Dev Tools)
-document.addEventListener('keydown', function(e) {
-    if (e.key === "F12") {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+I (Dev Tools)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+U (View Page Source)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+J (Console)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+C (Element Inspector)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault();
-    }
-});
 
             

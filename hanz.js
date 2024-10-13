@@ -53,7 +53,7 @@ document.getElementById('fake-recaptcha-checkbox').addEventListener('click', fun
     }
 
 ///
-<script>
+
    //// disable inspect
      // Disable Right Click
 document.addEventListener('contextmenu', function(e) {
@@ -111,4 +111,4 @@ document.addEventListener('keydown', function(e) {
         }
     });
 
-    </script>
+

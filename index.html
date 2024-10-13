@@ -68,24 +68,7 @@
     }
 });
 
-//reCaptcha
-document.getElementById('fake-recaptcha-checkbox').addEventListener('click', function(e) {
-    const fakeRecaptcha = document.querySelector('.fake-recaptcha');
-    
-    // Prevent immediate checkbox check
-    if (!this.checked) {
-        e.preventDefault();  // Prevent the default check behavior
-        
-        // Add the loading class to trigger loading animation
-        fakeRecaptcha.classList.add('loading');
-        
-        // Simulate a loading delay (2 seconds)
-        setTimeout(() => {
-            fakeRecaptcha.classList.remove('loading');  // Remove loading class
-            this.checked = true;  // Manually check the checkbox after loading
-        }, 2000);  // Delay of 2 seconds
-    }
-});
+
 
          // login function
             function validateLogin(event) {

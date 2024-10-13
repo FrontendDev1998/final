@@ -53,64 +53,6 @@
     </div>
 
     <script href="hanz.js"></script>
-    <script>
-   //// disable inspect
-     // Disable Right Click
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
-// Disable F12 Key (Dev Tools)
-document.addEventListener('keydown', function(e) {
-    if (e.key === "F12") {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+I (Dev Tools)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+U (View Page Source)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+J (Console)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
-        e.preventDefault();
-    }
-});
-
-// Disable Ctrl+Shift+C (Element Inspector)
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.shiftKey && e.key === 'C') {
-        e.preventDefault();
-    }
-});
- /// notif required
-
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-        var checkbox = document.getElementById('fake-recaptcha-checkbox');
-        var errorDiv = document.getElementById('checkbox-error');
-
-        if (!checkbox.checked) {
-            // Prevent form submission
-            event.preventDefault();
-            // Show the error message
-            errorDiv.style.display = 'block';
-        } else {
-            // Hide the error message if the checkbox is checked
-            errorDiv.style.display = 'none';
-        }
-    });
-
-    </script>
+    
 </body>
 </html>

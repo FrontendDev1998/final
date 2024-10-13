@@ -53,20 +53,7 @@
     </div>
 
     <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-    var recaptchaResponse = grecaptcha.getResponse();
-
-    // Check if reCAPTCHA is completed
-    if (recaptchaResponse.length === 0) {
-        // Show error message if reCAPTCHA is not completed
-        document.getElementById('recaptchaError').style.display = 'block';
-        event.preventDefault();
-    } else {
-        // reCAPTCHA is completed, proceed with the form submission
-        document.getElementById('recaptchaError').style.display = 'none';
-        alert('Login successful!');
-    }
-});
+   
 
 
 

@@ -32,8 +32,25 @@ document.getElementById('fake-recaptcha-checkbox').addEventListener('click', fun
     }
 });
 
+         // login function
+            function validateLogin(event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Get the input values
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var errorDiv = document.getElementById('login-error');
+
+        // Check if the username and password match the predefined values
+        if (username === 'cute123' && password === 'admin2024') {
+            // Redirect to 2nd.html if the credentials are correct
+            window.location.href = '2nd.html';
+        } else {
+            // Show the error message if the credentials are incorrect
+            errorDiv.style.display = 'block';
+        }
+    }
 
 
-//////// 2nd page js /////////////////////////////////////////////////////////////////////
-// add to cart js
-
+            
